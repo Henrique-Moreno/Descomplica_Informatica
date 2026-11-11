@@ -38,3 +38,7 @@ src/
 - Use exports nomeados na própria declaração; não use `export default`, exceto em arquivos de configuração.
 - Estilo: CSS Modules por componente e variáveis globais em `src/app/estilos/tokens.css`.
 - SVG: gradientes e filtros ficam em `DefinicoesSvg`, renderizado uma vez no `App`; ids usam o prefixo `iq-`.
+
+## Mesa
+
+A mesa é uma cena SVG única com viewBox de 960×600. A geometria fica em `components/mesa/geometria.ts`; os desenhos das peças usam coordenadas locais e a mesa os posiciona. O acerto do cabo será calculado por distância, por isso as portas não capturam o ponteiro.

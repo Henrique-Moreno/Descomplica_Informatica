@@ -19,4 +19,5 @@ export { estadoInicial, reducerJogo } from './model/jogo';
 export { deveMostrarDicaDasPortas, pecaAtual, portasLivres, progresso } from './model/seletores';
 export { estrelas, pontuacaoMaxima } from './model/pontuacao';
 export { DefinicoesSvg } from './components/svg/DefinicoesSvg';
-export { GaleriaPecas } from './components/galeria/GaleriaPecas';
+export { Mesa } from './components/mesa/Mesa';
+export type { EstadoPorta } from './components/mesa/portas/PortaSvg';

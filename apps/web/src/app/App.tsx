@@ -1,11 +1,12 @@
-import { DefinicoesSvg, GaleriaPecas } from '@/features/jogo';
+import { DefinicoesSvg, Mesa } from '@/features/jogo';
 
 export function App() {
   return (
     <main>
       <DefinicoesSvg />
       <h1>InfoQuest</h1>
-      <GaleriaPecas />
+      {/* A mesa fica provisoriamente montada para conferência visual. */}
+      <Mesa pecaAlvo="teclado" pecasLigadas={[]} conexoes={{}} estadoPortas={{}} mostrarRotulos />
     </main>
   );
 }

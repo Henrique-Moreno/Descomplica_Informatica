@@ -1,0 +1,35 @@
+.mesa {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: calc(100vh - 230px);
+  margin: 0 auto;
+  touch-action: none;
+}
+
+.peca {
+  transition: opacity 0.2s;
+}
+
+.apagada {
+  opacity: 0.4;
+}
+
+.alvo {
+  opacity: 1;
+  filter: drop-shadow(0 0 10px #ffc93c);
+}
+
+.ligada {
+  opacity: 1;
+}
+
+.semPonteiro {
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .peca {
+    transition: none;
+  }
+}
