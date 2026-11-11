@@ -1,0 +1,44 @@
+.botao {
+  display: inline-grid;
+  width: 44px;
+  min-width: 44px;
+  height: 44px;
+  min-height: 44px;
+  place-items: center;
+  padding: 0;
+  border: 1px solid var(--cor-linha);
+  border-radius: 50%;
+  background: var(--cor-cartao);
+  color: var(--cor-destaque);
+  cursor: pointer;
+}
+
+.botao:hover {
+  background: var(--cor-suave);
+}
+
+.botao:focus-visible {
+  outline: 3px solid var(--cor-destaque);
+  outline-offset: 3px;
+}
+
+.icone {
+  width: 24px;
+  height: 24px;
+}
+
+.contorno,
+.raio {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-width: 1.8;
+}
+
+.raio {
+  stroke-width: 2;
+}
+
+.lua {
+  fill: currentColor;
+}

@@ -38,6 +38,7 @@ src/
 - Use exports nomeados na própria declaração; não use `export default`, exceto em arquivos de configuração.
 - Estilo: CSS Modules por componente e variáveis globais em `src/app/estilos/tokens.css`.
 - SVG: gradientes e filtros ficam em `DefinicoesSvg`, renderizado uma vez no `App`; ids usam o prefixo `iq-`.
+- O tema oferece Automático, Claro e Escuro; a escolha é salva localmente e o automático segue o tema do sistema.
 
 ## Mesa
 
