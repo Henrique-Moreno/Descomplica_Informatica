@@ -1,0 +1,31 @@
+.lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: var(--espacamento);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cartao {
+  min-width: 0;
+  padding: var(--espacamento);
+  border: 1px solid var(--cor-linha);
+  border-radius: 1rem;
+  background: var(--cor-cartao);
+  color: var(--cor-texto);
+}
+
+.areaDesenho {
+  height: 140px;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  background: var(--cor-mesa);
+}
+
+.nome {
+  margin: var(--espacamento) 0 0;
+  color: var(--cor-texto);
+  font-weight: 700;
+  text-align: center;
+}

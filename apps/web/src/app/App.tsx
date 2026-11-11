@@ -1,3 +1,11 @@
+import { DefinicoesSvg, GaleriaPecas } from '@/features/jogo';
+
 export function App() {
-  return <h1>InfoQuest</h1>;
+  return (
+    <main>
+      <DefinicoesSvg />
+      <h1>InfoQuest</h1>
+      <GaleriaPecas />
+    </main>
+  );
 }

@@ -36,3 +36,5 @@ src/
 - Testes ao lado do arquivo testado, com o formato `algo.test.ts`.
 - Nomes do domínio em português.
 - Use exports nomeados na própria declaração; não use `export default`, exceto em arquivos de configuração.
+- Estilo: CSS Modules por componente e variáveis globais em `src/app/estilos/tokens.css`.
+- SVG: gradientes e filtros ficam em `DefinicoesSvg`, renderizado uma vez no `App`; ids usam o prefixo `iq-`.

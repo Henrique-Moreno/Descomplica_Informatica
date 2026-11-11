@@ -18,3 +18,5 @@ export { criarPartida } from './model/partida';
 export { estadoInicial, reducerJogo } from './model/jogo';
 export { deveMostrarDicaDasPortas, pecaAtual, portasLivres, progresso } from './model/seletores';
 export { estrelas, pontuacaoMaxima } from './model/pontuacao';
+export { DefinicoesSvg } from './components/svg/DefinicoesSvg';
+export { GaleriaPecas } from './components/galeria/GaleriaPecas';
