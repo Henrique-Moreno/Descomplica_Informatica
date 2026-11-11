@@ -1,15 +1,21 @@
-import { PECAS, pecaPorId } from '@/features/jogo/data/pecas';
+import { pecaPorId } from '@/features/jogo/data/pecas';
 import { PORTAS } from '@/features/jogo/data/portas';
 import { pontosConexao, pontosIdentificacao } from './pontuacao';
-import type { AcaoJogo, EstadoJogo, IdPeca, Partida } from './tipos';
+import type { AcaoJogo, EstadoJogo, Partida } from './tipos';
 
-const PECAS_IDS: readonly IdPeca[] = PECAS.map((peca) => peca.id);
+// Literal explícito: se um id novo entrar em IdPeca, o TypeScript acusa a chave que falta.
 const PARTIDA_VAZIA: Partida = {
   ordem: [],
-  opcoes: Object.fromEntries(PECAS_IDS.map((id) => [id, []])) as unknown as Record<
-    IdPeca,
-    readonly string[]
-  >,
+  opcoes: {
+    teclado: [],
+    mouse: [],
+    webcam: [],
+    pendrive: [],
+    monitor: [],
+    caixaDeSom: [],
+    fone: [],
+    microfone: [],
+  },
 };
 
 export const estadoInicial: EstadoJogo = {
@@ -28,6 +34,8 @@ export const estadoInicial: EstadoJogo = {
 export function reducerJogo(estado: EstadoJogo, acao: AcaoJogo): EstadoJogo {
   switch (acao.tipo) {
     case 'iniciar':
+      // Sem peças não há jogo: continua onde estava em vez de travar na identificação.
+      if (acao.partida.ordem.length === 0) return estado;
       return {
         fase: 'identificar',
         partida: acao.partida,
@@ -45,8 +53,7 @@ export function reducerJogo(estado: EstadoJogo, acao: AcaoJogo): EstadoJogo {
       const id = estado.partida.ordem[estado.indice];
       if (!id) return estado;
       const peca = pecaPorId(id);
-      const opcoes = estado.partida.opcoes[id];
-      if (!opcoes?.includes(acao.nome)) return estado;
+      if (!estado.partida.opcoes[id].includes(acao.nome)) return estado;
 
       if (acao.nome === peca.nome) {
         return {
