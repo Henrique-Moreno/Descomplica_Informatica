@@ -35,3 +35,4 @@ src/
 - Demais arquivos: `camelCase.ts`.
 - Testes ao lado do arquivo testado, com o formato `algo.test.ts`.
 - Nomes do domínio em português.
+- Use exports nomeados na própria declaração; não use `export default`, exceto em arquivos de configuração.
