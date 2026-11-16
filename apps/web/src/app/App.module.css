@@ -9,3 +9,9 @@
 .titulo {
   margin: 0;
 }
+
+@media (max-width: 520px) {
+  .cabecalho {
+    flex-wrap: wrap;
+  }
+}

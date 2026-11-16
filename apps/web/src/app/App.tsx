@@ -1,4 +1,4 @@
-import { DefinicoesSvg, Mesa } from '@/features/jogo';
+import { DefinicoesSvg, Jogo } from '@/features/jogo';
 import { SeletorTema } from '@/shared/ui/SeletorTema';
 import estilos from './App.module.css';
 
@@ -11,7 +11,7 @@ export function App() {
         <SeletorTema />
       </header>
       {/* A mesa fica provisoriamente montada para conferência visual. */}
-      <Mesa pecaAlvo="teclado" pecasLigadas={[]} conexoes={{}} estadoPortas={{}} mostrarRotulos />
+      <Jogo />
     </main>
   );
 }

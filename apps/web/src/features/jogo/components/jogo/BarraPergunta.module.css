@@ -1,0 +1,78 @@
+.barra {
+  display: grid;
+  gap: 0.55rem;
+  padding: 1rem;
+  border: 1px solid var(--cor-linha);
+  border-radius: 18px;
+  background: var(--cor-cartao);
+}
+
+.barra h2 {
+  margin: 0;
+  font-family: var(--fonte-titulo);
+  font-size: clamp(1.1rem, 3vw, 1.45rem);
+}
+
+.instrucao {
+  margin: 0;
+  color: var(--cor-texto-suave);
+  font-size: 1.05rem;
+}
+
+.feedback {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  min-height: 1rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.feedback p {
+  margin: 0.25rem 0 0;
+}
+
+.bom,
+.ruim,
+.neutro {
+  padding: 0.7rem;
+}
+
+.bom {
+  background: var(--cor-acerto-fundo);
+  color: var(--cor-acerto);
+}
+
+.ruim {
+  background: var(--cor-erro-fundo);
+  color: var(--cor-erro);
+}
+
+.neutro {
+  background: var(--cor-suave);
+  color: var(--cor-texto);
+}
+
+.icone {
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+
+.proxima {
+  min-height: 52px;
+  padding: 0.7rem 1rem;
+  border: 0;
+  border-radius: 14px;
+  background: var(--cor-destaque);
+  color: var(--cor-fundo);
+  font: inherit;
+  font-size: 1.125rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.proxima:focus-visible {
+  outline: 3px solid var(--cor-destaque);
+  outline-offset: 3px;
+}

@@ -28,6 +28,22 @@
   pointer-events: none;
 }
 
+.alvoToque {
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.zonaToque {
+  fill: transparent;
+  stroke: transparent;
+  pointer-events: all;
+}
+
+.alvoToque:focus-visible .zonaToque {
+  stroke: var(--cor-destaque);
+  stroke-width: 3px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .peca {
     transition: none;
