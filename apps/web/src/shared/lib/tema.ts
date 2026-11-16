@@ -10,11 +10,6 @@ interface RaizTema {
 
 const CHAVE_TEMA = 'infoquest:tema';
 
-export function proximoTema(atual: Tema): Tema {
-  const indice = TEMAS.indexOf(atual);
-  return TEMAS[(indice + 1) % TEMAS.length] ?? TEMAS[0];
-}
-
 export function aplicarTema(tema: Tema, raiz: RaizTema): void {
   const valor = tema === 'claro' ? 'light' : tema === 'escuro' ? 'dark' : null;
 

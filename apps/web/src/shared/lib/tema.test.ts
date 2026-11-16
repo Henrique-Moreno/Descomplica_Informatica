@@ -1,17 +1,11 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { aplicarTema, lerTemaSalvo, proximoTema, salvarTema } from './tema';
+import { aplicarTema, lerTemaSalvo, salvarTema } from './tema';
 
 afterEach(() => {
   vi.unstubAllGlobals();
 });
 
 describe('tema', () => {
-  it('alterna entre automático, claro e escuro', () => {
-    expect(proximoTema('automatico')).toBe('claro');
-    expect(proximoTema('claro')).toBe('escuro');
-    expect(proximoTema('escuro')).toBe('automatico');
-  });
-
   it('aplica os temas e remove o atributo no automático', () => {
     const raiz: { dataset: { theme?: string } } = { dataset: {} };
 

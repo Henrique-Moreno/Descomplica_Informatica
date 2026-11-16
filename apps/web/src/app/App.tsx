@@ -1,5 +1,5 @@
 import { DefinicoesSvg, Mesa } from '@/features/jogo';
-import { BotaoTema } from '@/shared/ui/BotaoTema';
+import { SeletorTema } from '@/shared/ui/SeletorTema';
 import estilos from './App.module.css';
 
 export function App() {
@@ -8,7 +8,7 @@ export function App() {
       <DefinicoesSvg />
       <header className={estilos.cabecalho}>
         <h1 className={estilos.titulo}>InfoQuest</h1>
-        <BotaoTema />
+        <SeletorTema />
       </header>
       {/* A mesa fica provisoriamente montada para conferência visual. */}
       <Mesa pecaAlvo="teclado" pecasLigadas={[]} conexoes={{}} estadoPortas={{}} mostrarRotulos />
