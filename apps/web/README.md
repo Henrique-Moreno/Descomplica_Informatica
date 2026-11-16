@@ -42,8 +42,8 @@ src/
 
 ## Mesa
 
-A mesa é uma cena SVG única com viewBox de 960×600. A geometria fica em `components/mesa/geometria.ts`; os desenhos das peças usam coordenadas locais e a mesa os posiciona. O acerto do cabo será calculado por distância, por isso as portas não capturam o ponteiro.
+A mesa é uma cena SVG única com viewBox de 960×600. A geometria fica em `components/mesa/geometria.ts`; os desenhos das peças usam coordenadas locais e a mesa os posiciona. Durante a conexão, apenas a peça alvo é arrastável; o toque e o teclado nas portas continuam disponíveis como alternativa.
 
 ## Fluxo do jogo
 
-O jogo passa pelas fases de início, identificação das oito peças, conexão e resultado. O hook `features/jogo/hooks/useJogo` coordena a partida com o reducer puro; nesta etapa, a conexão acontece tocando ou clicando na porta e será substituída por arrastar o cabo no passo seguinte.
+O jogo passa pelas fases de início, identificação das oito peças, conexão e resultado. O hook `features/jogo/hooks/useJogo` coordena a partida com o reducer puro. A conexão usa arrasto do cabo; toque e teclado nas portas seguem disponíveis como alternativa.

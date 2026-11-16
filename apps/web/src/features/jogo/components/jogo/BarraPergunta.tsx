@@ -18,7 +18,7 @@ export function BarraPergunta({ estado, peca, onProximaPeca }: BarraPerguntaProp
     <section className={estilos.barra} aria-label="Conexão da peça">
       <h2>Eu sou {nomeComArtigo(peca)}. Em que lugar eu devo me conectar?</h2>
       <p className={estilos.instrucao}>
-        Toque na porta certa do gabinete (em breve você vai puxar o cabo)
+        Puxe o meu cabo até a porta certa do gabinete. Pelo teclado: Tab até a porta e Enter.
       </p>
       <div
         className={`${estilos.feedback} ${feedback ? estilos[feedback.tom] : ''}`}

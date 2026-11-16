@@ -4,6 +4,7 @@ import { criarPartida } from './partida';
 import {
   deveParabenizar,
   pecaAtual,
+  portaAceita,
   portasEmDestaque,
   portasLivres,
   progresso,
@@ -11,6 +12,22 @@ import {
 } from './seletores';
 
 describe('seletores do jogo', () => {
+  it('aceita apenas uma porta correta e livre na fase de conexão', () => {
+    let estado = reducerJogo(estadoInicial, {
+      tipo: 'iniciar',
+      partida: { ...criarPartida(() => 0.5), ordem: ['teclado'] },
+      rotulosNasPortas: false,
+    });
+    estado = reducerJogo(estado, { tipo: 'escolherOpcao', nome: 'Teclado' });
+    estado = reducerJogo(estado, { tipo: 'continuar' });
+
+    expect(portaAceita(estado, 'usb1')).toBe(true);
+    expect(portaAceita(estado, 'hdmi')).toBe(false);
+    expect(portaAceita({ ...estado, conexoes: { mouse: 'usb1' } }, 'usb1')).toBe(false);
+    expect(portaAceita(estado, null)).toBe(false);
+    expect(portaAceita({ ...estado, fase: 'identificar' }, 'usb1')).toBe(false);
+  });
+
   it('atualiza portas livres depois de conectar', () => {
     let estado = reducerJogo(estadoInicial, {
       tipo: 'iniciar',

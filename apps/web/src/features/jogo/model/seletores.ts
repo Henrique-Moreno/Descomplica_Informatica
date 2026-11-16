@@ -41,3 +41,11 @@ export function progressoDaPartida(estado: EstadoJogo): { atual: number; total: 
 export function deveParabenizar(pontos: number): boolean {
   return pontos >= PONTUACAO_MAXIMA * 0.7;
 }
+
+export function portaAceita(estado: EstadoJogo, portaId: IdPorta | null): boolean {
+  if (estado.fase !== 'conectar' || portaId === null) return false;
+  if (Object.values(estado.conexoes).includes(portaId)) return false;
+  const peca = pecaAtual(estado);
+  const porta = PORTAS.find((item) => item.id === portaId);
+  return peca !== null && porta !== undefined && porta.tipo === peca.tipoPorta;
+}

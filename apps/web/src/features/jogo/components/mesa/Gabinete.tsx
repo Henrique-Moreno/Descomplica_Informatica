@@ -1,6 +1,7 @@
+import { memo } from 'react';
 import estilos from './Gabinete.module.css';
 
-export function Gabinete() {
+export const Gabinete = memo(function Gabinete() {
   return (
     <g>
       <rect
@@ -142,4 +143,4 @@ export function Gabinete() {
       </text>
     </g>
   );
-}
+});

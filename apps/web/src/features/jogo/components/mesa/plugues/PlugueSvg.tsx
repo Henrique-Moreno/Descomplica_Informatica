@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import type { TipoPorta } from '../../../model/tipos';
 
 interface PlugueSvgProps {
@@ -7,7 +8,7 @@ interface PlugueSvgProps {
   readonly lado: 1 | -1;
 }
 
-export function PlugueSvg({ tipo, x, y, lado }: PlugueSvgProps) {
+export const PlugueSvg = memo(function PlugueSvg({ tipo, x, y, lado }: PlugueSvgProps) {
   return (
     <g transform={`translate(${x} ${y}) scale(${lado} 1)`} style={{ pointerEvents: 'none' }}>
       {tipo === 'usb' && (
@@ -85,4 +86,4 @@ export function PlugueSvg({ tipo, x, y, lado }: PlugueSvgProps) {
       )}
     </g>
   );
-}
+});
