@@ -1,3 +1,5 @@
+import { PECAS } from '@/features/jogo/data/pecas';
+
 const PONTOS_IDENTIFICACAO_PRIMEIRA = 5;
 const PONTOS_IDENTIFICACAO_COM_ERRO = 2;
 const PONTOS_CONEXAO_PRIMEIRA = 10;
@@ -20,6 +22,8 @@ export function pontosConexao(tentativasErradas: number): number {
 export function pontuacaoMaxima(totalPecas: number): number {
   return totalPecas * PONTOS_POR_PECA;
 }
+
+export const PONTUACAO_MAXIMA = pontuacaoMaxima(PECAS.length);
 
 export function estrelas(pontos: number, maximo: number): 1 | 2 | 3 {
   const proporcao = maximo > 0 ? pontos / maximo : 0;

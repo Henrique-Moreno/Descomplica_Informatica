@@ -123,7 +123,7 @@ describe('reducerJogo', () => {
     estado = identificar(estado);
     estado = agir(estado, { tipo: 'continuar' });
     estado = agir(estado, { tipo: 'soltarCabo', portaId: 'usb1' });
-    expect(estado.resultadoConexao).toEqual({ tipo: 'porta-ocupada' });
+    expect(estado.resultadoConexao).toEqual({ tipo: 'porta-ocupada', portaId: 'usb1' });
     expect(estado.tentativasConexao).toBe(0);
   });
 
@@ -139,6 +139,7 @@ describe('reducerJogo', () => {
     expect(estado.tentativasConexao).toBe(1);
     expect(estado.resultadoConexao).toEqual({
       tipo: 'porta-errada',
+      portaId: portaIncorreta.id,
       tipoPortaTocada: portaIncorreta.tipo,
     });
   });
