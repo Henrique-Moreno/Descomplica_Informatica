@@ -1,0 +1,15 @@
+.rotulo {
+  font-size: 13px;
+  fill: #fff;
+  text-anchor: middle;
+  font-weight: 800;
+  font-family: var(--fonte-texto);
+}
+
+.titulo {
+  font-size: 11px;
+  fill: #3a4366;
+  text-anchor: middle;
+  font-weight: 800;
+  font-family: var(--fonte-texto);
+}

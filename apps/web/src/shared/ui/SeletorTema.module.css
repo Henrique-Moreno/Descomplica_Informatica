@@ -1,0 +1,35 @@
+.grupo {
+  display: inline-flex;
+  gap: 2px;
+  padding: 4px;
+  border: 2px solid var(--cor-linha);
+  border-radius: 999px;
+  background: var(--cor-cartao);
+}
+
+.opcao {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--cor-texto-suave);
+  cursor: pointer;
+}
+
+.opcao:hover {
+  background: var(--cor-suave);
+}
+
+.opcao:focus-visible {
+  outline: 3px solid var(--cor-destaque);
+  outline-offset: 2px;
+}
+
+.ativa,
+.ativa:hover {
+  background: var(--cor-destaque);
+  color: var(--cor-fundo);
+}
