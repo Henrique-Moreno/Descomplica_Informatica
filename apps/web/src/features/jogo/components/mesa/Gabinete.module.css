@@ -13,3 +13,8 @@
   font-weight: 800;
   font-family: var(--fonte-texto);
 }
+
+.destinoAceso {
+  stroke: #ffc93c;
+  stroke-width: 6px;
+}

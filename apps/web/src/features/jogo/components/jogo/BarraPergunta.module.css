@@ -59,6 +59,13 @@
   font-weight: 900;
 }
 
+.viajando {
+  margin: 0;
+  color: var(--cor-destaque);
+  font-size: 1.125rem;
+  font-weight: 800;
+}
+
 .proxima {
   min-height: 52px;
   padding: 0.7rem 1rem;

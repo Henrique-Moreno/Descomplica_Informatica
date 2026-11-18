@@ -6,10 +6,11 @@ import estilos from './BarraPergunta.module.css';
 interface BarraPerguntaProps {
   readonly estado: EstadoJogo;
   readonly peca: Peca;
+  readonly podeAvancar: boolean;
   readonly onProximaPeca: () => void;
 }
 
-export function BarraPergunta({ estado, peca, onProximaPeca }: BarraPerguntaProps) {
+export function BarraPergunta({ estado, peca, podeAvancar, onProximaPeca }: BarraPerguntaProps) {
   const feedback = mensagemConexao(peca, estado.resultadoConexao);
   const progresso = progressoDaPartida(estado);
   const conectado = estado.fase === 'conectado';
@@ -39,7 +40,12 @@ export function BarraPergunta({ estado, peca, onProximaPeca }: BarraPerguntaProp
           </>
         )}
       </div>
-      {conectado && (
+      {conectado && !podeAvancar && (
+        <p className={estilos.viajando} role="status" aria-live="polite">
+          A informação está viajando…
+        </p>
+      )}
+      {conectado && podeAvancar && (
         <button className={estilos.proxima} type="button" autoFocus onClick={onProximaPeca}>
           {progresso.atual === progresso.total ? 'Ver resultado' : 'Próxima peça'}
         </button>

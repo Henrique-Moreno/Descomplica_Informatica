@@ -38,6 +38,14 @@ export function caminhoDoCabo(de: Ponto, ate: Ponto): string {
   return `M${de[0]} ${de[1]}C${meio} ${de[1]} ${meio} ${ate[1]} ${ate[0]} ${ate[1]}`;
 }
 
+export function pontoDoCabo(de: Ponto, ate: Ponto, t: number): Ponto {
+  const meio = de[0] + (ate[0] - de[0]) / 2;
+  const u = 1 - t;
+  const x = u ** 3 * de[0] + 3 * u * u * t * meio + 3 * u * t * t * meio + t ** 3 * ate[0];
+  const y = u ** 3 * de[1] + 3 * u * u * t * de[1] + 3 * u * t * t * ate[1] + t ** 3 * ate[1];
+  return [x, y];
+}
+
 export function interpolar(a: Ponto, b: Ponto, t: number): Ponto {
   return [a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t];
 }

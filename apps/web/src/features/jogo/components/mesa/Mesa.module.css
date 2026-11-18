@@ -56,6 +56,11 @@
   pointer-events: none;
 }
 
+.ativo {
+  stroke: var(--cor-destaque);
+  stroke-width: 6;
+}
+
 .zonaToque {
   fill: transparent;
   stroke: transparent;

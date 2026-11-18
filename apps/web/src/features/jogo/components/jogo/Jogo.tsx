@@ -3,6 +3,7 @@ import { calcularEstadoPortas } from '../mesa/estadoDasPortas';
 import { Mesa } from '../mesa/Mesa';
 import { useJogo } from '../../hooks/useJogo';
 import { useArrastarCabo } from '../../hooks/useArrastarCabo';
+import { useViagemDaInformacao } from '../../hooks/useViagemDaInformacao';
 import { BarraPergunta } from './BarraPergunta';
 import { BarraStatus } from './BarraStatus';
 import { ModalIdentificar } from './ModalIdentificar';
@@ -13,6 +14,7 @@ import estilos from './Jogo.module.css';
 export function Jogo() {
   const jogo = useJogo();
   const { estado, pecaAtual } = jogo;
+  const { viagem, animando } = useViagemDaInformacao(estado);
   const controleDeArrasto = useArrastarCabo({
     estado,
     pecaAtual,
@@ -33,7 +35,12 @@ export function Jogo() {
     <section className={estilos.jogo} aria-label="Partida InfoQuest">
       <BarraStatus estado={estado} />
       {emConexao && (
-        <BarraPergunta estado={estado} peca={pecaAtual} onProximaPeca={jogo.proximaPeca} />
+        <BarraPergunta
+          estado={estado}
+          peca={pecaAtual}
+          podeAvancar={!animando}
+          onProximaPeca={jogo.proximaPeca}
+        />
       )}
       <Mesa
         pecaAlvo={estado.fase === 'conectar' ? pecaAtual.id : null}
@@ -43,6 +50,7 @@ export function Jogo() {
         mostrarRotulos={estado.rotulosNasPortas}
         aoEscolherPorta={estado.fase === 'conectar' ? jogo.soltarCabo : undefined}
         controleDeArrasto={estado.fase === 'conectar' ? controleDeArrasto : undefined}
+        viagem={viagem}
       />
       {(estado.fase === 'identificar' || estado.fase === 'identificado') && (
         <ModalIdentificar

@@ -19,6 +19,7 @@ import { PortaSvg } from './portas/PortaSvg';
 import type { EstadoPorta } from './portas/PortaSvg';
 import { PlugueSvg } from './plugues/PlugueSvg';
 import { caminhoDoCabo } from './arrasto';
+import type { Viagem } from '../../hooks/useViagemDaInformacao';
 import estilos from './Mesa.module.css';
 
 interface MesaProps {
@@ -29,6 +30,7 @@ interface MesaProps {
   readonly mostrarRotulos: boolean;
   readonly aoEscolherPorta?: (portaId: IdPorta) => void;
   readonly controleDeArrasto?: ControleDeArrasto;
+  readonly viagem?: Viagem | null;
 }
 
 interface PecaNaMesaProps {
@@ -139,8 +141,10 @@ const PecasMesa = memo(function PecasMesa({
 
 const CabosConectados = memo(function CabosConectados({
   conexoes,
+  pecaAtiva,
 }: {
   readonly conexoes: Partial<Record<IdPeca, IdPorta>>;
+  readonly pecaAtiva: IdPeca | null;
 }) {
   return (
     <>
@@ -151,7 +155,7 @@ const CabosConectados = memo(function CabosConectados({
           <path
             key={peca.id}
             d={caminhoDoCabo(ANCORA_CABO[peca.id], POSICAO_PORTAS[portaId].entrada)}
-            className={estilos.cabo}
+            className={`${estilos.cabo} ${pecaAtiva === peca.id ? estilos.ativo : ''}`}
           />
         );
       })}
@@ -221,6 +225,7 @@ export function Mesa({
   mostrarRotulos,
   aoEscolherPorta,
   controleDeArrasto,
+  viagem,
 }: MesaProps) {
   const arrasto = controleDeArrasto?.arrasto ?? null;
   return (
@@ -231,11 +236,11 @@ export function Mesa({
       aria-label="Computador com portas e peças para ligar"
     >
       <rect width={LARGURA_MESA} height={ALTURA_MESA} rx="20" fill="var(--cor-mesa)" />
-      <Gabinete />
+      <Gabinete destinoAceso={viagem?.destinoAceso ?? null} />
       <PortasMesa estadoPortas={estadoPortas} mostrarRotulos={mostrarRotulos} />
       <PecasMesa pecaAlvo={pecaAlvo} pecasLigadas={pecasLigadas} controle={controleDeArrasto} />
       <g id="iq-cabos" className={estilos.semPonteiro}>
-        <CabosConectados conexoes={conexoes} />
+        <CabosConectados conexoes={conexoes} pecaAtiva={viagem?.peca ?? null} />
         {arrasto && (
           <path
             d={caminhoDoCabo(ANCORA_CABO[arrasto.peca], arrasto.origem)}
@@ -261,8 +266,8 @@ export function Mesa({
         id="iq-ponto"
         className={estilos.semPonteiro}
         r="9"
-        cx="-50"
-        cy="-50"
+        cx={viagem?.ponto?.[0] ?? -50}
+        cy={viagem?.ponto?.[1] ?? -50}
         fill="#FFC93C"
         stroke="#1b2250"
         strokeWidth="3"
