@@ -1,0 +1,65 @@
+.tela {
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: clamp(1.25rem, 5vw, 2.5rem);
+  border: 1px solid var(--cor-linha);
+  border-radius: 24px;
+  background: var(--cor-cartao);
+  text-align: center;
+}
+
+.tela h2 {
+  margin: 0;
+  font-family: var(--fonte-titulo);
+  font-size: clamp(1.7rem, 6vw, 2.5rem);
+}
+
+.estrelas {
+  width: min(180px, 60vw);
+  height: auto;
+}
+
+.estrelaCheia {
+  fill: var(--cor-amarelo);
+  stroke: #b77800;
+  stroke-width: 2;
+}
+
+.estrelaVazia {
+  fill: var(--cor-suave);
+  stroke: var(--cor-linha);
+  stroke-width: 2;
+}
+
+.pontos {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+.mensagem {
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.tela button {
+  min-height: 52px;
+  padding: 0.7rem 1.2rem;
+  border: 0;
+  border-radius: 14px;
+  background: var(--cor-destaque);
+  color: var(--cor-fundo);
+  font: inherit;
+  font-size: 1.125rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.tela button:focus-visible {
+  outline: 3px solid var(--cor-destaque);
+  outline-offset: 3px;
+}

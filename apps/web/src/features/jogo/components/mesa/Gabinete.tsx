@@ -1,6 +1,12 @@
+import { memo } from 'react';
+import type { Destino } from './viagem';
 import estilos from './Gabinete.module.css';
 
-export function Gabinete() {
+interface GabineteProps {
+  readonly destinoAceso?: Destino | null;
+}
+
+export const Gabinete = memo(function Gabinete({ destinoAceso = null }: GabineteProps) {
   return (
     <g>
       <rect
@@ -59,6 +65,7 @@ export function Gabinete() {
         fill="#1b2038"
         stroke="#8d97b0"
         strokeWidth="3"
+        className={destinoAceso === 'processador' ? estilos.destinoAceso : undefined}
       />
       <g fill="#2D4BFF" opacity=".9" transform="translate(419 109)">
         <path d="M0 0C6-12 18-22 28-16C22-8 10-2 0 0Z" />
@@ -112,6 +119,7 @@ export function Gabinete() {
         fill="url(#iq-metal)"
         stroke="#8d97b0"
         strokeWidth="3"
+        className={destinoAceso === 'armazenamento' ? estilos.destinoAceso : undefined}
       />
       <text
         x="477"
@@ -142,4 +150,4 @@ export function Gabinete() {
       </text>
     </g>
   );
-}
+});
