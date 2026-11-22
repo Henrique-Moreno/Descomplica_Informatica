@@ -1,0 +1,11 @@
+.status {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem 1rem;
+  border-radius: 14px;
+  background: var(--cor-cartao);
+  color: var(--cor-texto);
+  font-size: 1.125rem;
+  font-weight: 800;
+}

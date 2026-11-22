@@ -12,6 +12,7 @@ export interface Peca {
   readonly id: IdPeca;
   readonly nome: string;
   readonly artigo: 'o' | 'a';
+  readonly frase: string;
   readonly direcao: DirecaoInformacao;
   readonly tipoPorta: TipoPorta;
   readonly destino: DestinoInformacao;
@@ -28,8 +29,12 @@ export type Fase = 'inicio' | 'identificar' | 'identificado' | 'conectar' | 'con
 
 export type ResultadoConexao =
   | { readonly tipo: 'sem-porta' }
-  | { readonly tipo: 'porta-ocupada' }
-  | { readonly tipo: 'porta-errada'; readonly tipoPortaTocada: TipoPorta }
+  | { readonly tipo: 'porta-ocupada'; readonly portaId: IdPorta }
+  | {
+      readonly tipo: 'porta-errada';
+      readonly portaId: IdPorta;
+      readonly tipoPortaTocada: TipoPorta;
+    }
   | { readonly tipo: 'acertou'; readonly pontosGanhos: number };
 
 export interface Partida {

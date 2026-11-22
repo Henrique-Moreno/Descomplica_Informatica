@@ -78,7 +78,7 @@ export function reducerJogo(estado: EstadoJogo, acao: AcaoJogo): EstadoJogo {
         return { ...estado, resultadoConexao: { tipo: 'sem-porta' } };
       }
       if (Object.values(estado.conexoes).includes(acao.portaId)) {
-        return { ...estado, resultadoConexao: { tipo: 'porta-ocupada' } };
+        return { ...estado, resultadoConexao: { tipo: 'porta-ocupada', portaId: acao.portaId } };
       }
       const porta = PORTAS.find((item) => item.id === acao.portaId);
       if (!porta) return estado;
@@ -89,7 +89,11 @@ export function reducerJogo(estado: EstadoJogo, acao: AcaoJogo): EstadoJogo {
         return {
           ...estado,
           tentativasConexao: estado.tentativasConexao + 1,
-          resultadoConexao: { tipo: 'porta-errada', tipoPortaTocada: porta.tipo },
+          resultadoConexao: {
+            tipo: 'porta-errada',
+            portaId: acao.portaId,
+            tipoPortaTocada: porta.tipo,
+          },
         };
       }
       const pontosGanhos = pontosConexao(estado.tentativasConexao);

@@ -1,0 +1,77 @@
+.cartao {
+  display: grid;
+  gap: 1.25rem;
+  max-width: 680px;
+  margin: 2rem auto;
+  padding: clamp(1.25rem, 5vw, 2.5rem);
+  border: 1px solid var(--cor-linha);
+  border-radius: 24px;
+  background: var(--cor-cartao);
+  box-shadow: 0 12px 34px rgb(27 34 80 / 12%);
+}
+
+.cartao h2 {
+  margin: 0;
+  font-family: var(--fonte-titulo);
+  font-size: clamp(1.6rem, 5vw, 2.4rem);
+}
+
+.passos {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+  padding-left: 1.5rem;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.escolha {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.escolha legend {
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.opcoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.opcoes button,
+.comecar {
+  min-height: 52px;
+  padding: 0.7rem 1.1rem;
+  border: 2px solid var(--cor-linha);
+  border-radius: 14px;
+  background: var(--cor-cartao);
+  color: var(--cor-texto);
+  font: inherit;
+  font-size: 1.125rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.opcoes button[aria-pressed='true'] {
+  border-color: var(--cor-destaque);
+  background: var(--cor-suave);
+}
+
+.comecar {
+  border-color: var(--cor-destaque);
+  background: var(--cor-destaque);
+  color: var(--cor-fundo);
+}
+
+.opcoes button:focus-visible,
+.comecar:focus-visible {
+  outline: 3px solid var(--cor-destaque);
+  outline-offset: 3px;
+}

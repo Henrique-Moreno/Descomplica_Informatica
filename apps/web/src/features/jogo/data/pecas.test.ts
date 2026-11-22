@@ -23,4 +23,14 @@ describe('dados do jogo', () => {
       expect(quantidadePortas).toBeGreaterThanOrEqual(quantidadePecas);
     }
   });
+
+  it('tem artigo e frase válidos sem revelar o nome da peça', () => {
+    for (const peca of PECAS) {
+      expect(['o', 'a']).toContain(peca.artigo);
+      expect(peca.frase.trim()).not.toBe('');
+      expect(peca.frase.toLocaleLowerCase('pt-BR')).not.toContain(
+        peca.nome.toLocaleLowerCase('pt-BR'),
+      );
+    }
+  });
 });

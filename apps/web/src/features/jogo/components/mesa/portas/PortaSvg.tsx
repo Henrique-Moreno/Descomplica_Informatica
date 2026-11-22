@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { POSICAO_PORTAS } from '../geometria';
 import estilos from './PortaSvg.module.css';
 import type { IdPorta, TipoPorta } from '../../../model/tipos';
@@ -11,7 +12,7 @@ interface PortaSvgProps {
   readonly mostrarRotulo: boolean;
 }
 
-export function PortaSvg({ id, tipo, estado, mostrarRotulo }: PortaSvgProps) {
+export const PortaSvg = memo(function PortaSvg({ id, tipo, estado, mostrarRotulo }: PortaSvgProps) {
   const [cx, cy] = POSICAO_PORTAS[id].centro;
 
   return (
@@ -80,4 +81,4 @@ export function PortaSvg({ id, tipo, estado, mostrarRotulo }: PortaSvgProps) {
       )}
     </g>
   );
-}
+});
