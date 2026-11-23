@@ -1,159 +1,69 @@
-# InfoQuest
 
-Jogo educativo de informática básica para crianças de 10 a 12 anos, conduzido pelo professor em sala de aula e feito para rodar no navegador.
+# Descomplica Informática
 
-> Status: em planejamento. Este repositório está sendo estruturado e ainda não há versão jogável publicada.
+## 💡 Sobre o projeto
 
-## Sobre o projeto
+O **Descomplica Informática** surgiu com o propósito de tornar o ensino de informática básica mais acessível, utilizando a gamificação como ferramenta de aprendizagem.
 
-O InfoQuest é um jogo para ensinar informática a crianças de 10 a 12 anos. Em vez de decorar uma lista de peças, a turma descobre como o computador funciona por dentro: cada peça tem uma função, e todas se conectam entre si.
+A ideia nasceu da percepção de que muitas escolas públicas e associações que atendem comunidades em situação de vulnerabilidade social enfrentam dificuldades para oferecer atividades e recursos de qualidade na área da tecnologia.
 
-A aula é guiada pelo professor, que projeta o jogo na TV a partir do notebook. A turma é dividida em equipes formadas com os nomes dos próprios alunos, e a vez de jogar gira entre as equipes e, dentro de cada equipe, entre as crianças, para que todos participem.
+Diante dessa realidade, queremos criar uma plataforma educacional gratuita, que reúna diferentes atividades e jogos interativos para ensinar informática de maneira prática, lúdica e acessível.
 
-## Contexto e caráter social
+Por meio de experiências gamificadas, crianças poderão aprender, explorar e experimentar conceitos de informática. Entre as atividades, estão experiências como montar um computador em um ambiente 3D, conhecer seus componentes, conectar periféricos às portas corretas e descobrir, na prática, como a tecnologia funciona.
 
-O projeto nasce para escolas públicas, onde recursos costumam ser limitados: internet instável, equipamentos modestos e pouco orçamento para material digital. Por isso o InfoQuest segue três compromissos.
+Mais do que ensinar informática, queremos despertar a curiosidade, incentivar o raciocínio lógico e aproximar crianças do universo da tecnologia.
 
-1. Gratuito de ponta a ponta. Ferramentas, bibliotecas, gestão de tarefas e hospedagem são open source ou gratuitas. Nenhuma etapa do projeto depende de assinatura paga.
-2. Funciona sem internet. Depois do primeiro acesso, o jogo roda offline no notebook do professor, e os dados da turma ficam guardados na própria máquina.
-3. Privacidade das crianças. Os nomes dos alunos não saem do equipamento do professor. A proposta é manter os dados locais, com exportação e importação em arquivo para backup, em linha com a LGPD.
+## 🎯 Nossa missão
 
-## Objetivo
+Democratizar o acesso à educação tecnológica, oferecendo recursos gratuitos e acessíveis para escolas públicas, associações e comunidades que mais precisam de oportunidades de aprendizagem.
 
-Ajudar crianças de 10 a 12 anos a reconhecer cada componente do computador, entender para que ele serve e como ele se liga aos demais, por meio de desafios curtos, visuais e cooperativos.
+Acreditamos que aprender tecnologia deve ser uma oportunidade para todos, independentemente de sua condição social ou dos recursos disponíveis.
 
-Objetivos pedagógicos:
+## 🕹️ O que você encontrará na plataforma?
 
-- Identificar peças e componentes de um computador.
-- Relacionar cada peça à sua função: entrada, processamento, armazenamento e saída.
-- Entender como as peças se conectam, por quais portas e cabos, e por onde a informação passa.
-- Dar ao professor dados sobre o desempenho da turma, como tempo de resposta e número de tentativas por peça.
+O Descomplica Informática reúne atividades educativas que utilizam elementos de gamificação para tornar o aprendizado mais envolvente.
 
-## Como o jogo funciona
+Algumas das experiências propostas incluem:
 
-O fluxo tem quatro etapas:
+- **Montagem de computadores em 3D:** explore os componentes internos de um computador e aprenda onde cada peça deve ser instalada.
+- **Conexão de periféricos:** descubra como conectar teclado, mouse, monitor e outros dispositivos às portas corretas.
+- **Conhecendo o computador:** aprenda sobre os componentes e suas respectivas funções.
+- **Desafios interativos:** desenvolva conhecimentos por meio de jogos, atividades práticas e desafios.
 
-1. Equipes: o professor cadastra os alunos pelo nome e monta as equipes arrastando as crianças ou sorteando.
-2. Desafios: o professor escolhe o desafio da aula em uma trilha.
-3. Jogo: a equipe da vez, e dentro dela uma criança, responde ao desafio na TV.
-4. Resultado: placar, equipe vencedora e quadro de desempenho da turma.
+Novas atividades poderão ser desenvolvidas e incorporadas à plataforma pela comunidade.
 
-### Desafios previstos
+## 🌱 Um projeto gratuito, aberto e colaborativo
 
-| Ordem | Desafio                    | Ideia                                                                    |
-| ----- | -------------------------- | ------------------------------------------------------------------------ |
-| 1     | Ligue as peças             | Arrastar cada peça até a porta certa e ver a informação viajar pelo cabo |
-| 2     | Dentro do gabinete         | Encaixar processador, memória RAM e armazenamento nos lugares certos     |
-| 3     | Entrada, saída ou os dois? | Separar as peças pelo que elas fazem com a informação                    |
-| 4     | E se faltar uma peça?      | Descobrir o que para de funcionar quando uma peça é removida             |
-| 5     | Monte o computador         | Montar tudo do zero e comparar o tempo da turma                          |
+O **Descomplica Informática** é um projeto social e de código aberto (*open source*).
 
-### Pontuação
+A plataforma foi pensada para ser acessível:
 
-Quem acerta de primeira ganha 10 pontos, na segunda tentativa ganha 5, e depois disso ganha 0. O tempo de resposta é registrado para análise pedagógica e não vale pontos, para que a turma priorize entender em vez de responder rápido.
+- **100% gratuita:** sem cobrança para acessar as atividades.
+- **Sem necessidade de cadastro:** não é necessário criar uma conta ou fazer login.
+- **Sem coleta de dados pessoais:** não solicitamos informações pessoais para utilizar as atividades.
+- **Acesso simplificado:** buscamos reduzir barreiras para que mais pessoas possam aprender.
 
-## Pilha de tecnologias
+Além disso, acreditamos que a educação é construída coletivamente. Por isso, o projeto está aberto à colaboração de desenvolvedores, pedagogos, professores, estudantes e qualquer pessoa interessada em contribuir.
 
-Todas as ferramentas são open source ou gratuitas.
+Seja desenvolvendo novas atividades, propondo melhorias pedagógicas, identificando problemas ou compartilhando ideias, toda contribuição é bem-vinda.
 
-| Camada                  | Ferramenta                           | Papel no projeto                                          |
-| ----------------------- | ------------------------------------ | --------------------------------------------------------- |
-| Linguagem               | TypeScript em modo strict            | Tipagem em todos os pacotes                               |
-| Monorepo                | pnpm workspaces e Turborepo          | Pacotes isolados, cache de build e testes                 |
-| Aplicação               | Vite e React                         | Interface web, carregamento rápido                        |
-| Rotas                   | TanStack Router                      | Rotas tipadas para equipes, trilha, jogo e resultado      |
-| Fluxo do jogo           | XState                               | Máquina de estados do desafio e da aula                   |
-| Estado de interface     | Zustand                              | Estado leve de tela, fora do núcleo do jogo               |
-| Validação               | Zod                                  | Esquema do conteúdo dos desafios e dos dados salvos       |
-| Animação                | Motion                               | Cabos, pulsos de informação e transições em SVG           |
-| Arrastar                | dnd-kit e pointer events             | Montagem de equipes; gestos das peças e dos cabos         |
-| 3D (experimental)       | three, React Three Fiber e drei      | Carregado sob demanda, atrás de feature flag              |
-| Estilo                  | Tailwind CSS e Radix UI              | Tokens de design e componentes acessíveis                 |
-| Dados locais            | Dexie sobre IndexedDB                | Turmas e eventos guardados no notebook do professor       |
-| Offline                 | vite-plugin-pwa e Workbox            | Funcionamento sem internet                                |
-| Testes unitários        | Vitest e Testing Library             | Núcleo do jogo e componentes                              |
-| Testes de ponta a ponta | Playwright e axe-core                | Fluxo completo, arrastar e acessibilidade                 |
-| Qualidade de código     | Biome, Lefthook e dependency-cruiser | Lint, formatação, hooks de commit e regras de dependência |
-| Componentes             | Storybook                            | Vitrine das peças e telas para desenvolvimento e design   |
-| CI e deploy             | GitHub Actions                       | Testes e publicação automática                            |
-| Hospedagem              | GitHub Pages                         | Site estático gratuito                                    |
-| Gestão                  | GitHub Issues e Projects             | Backlog e marcos                                          |
-| Design e 3D             | Penpot, Blender e glTF Transform     | Interface, modelos e otimização                           |
+## 🤝 Como contribuir?
 
-## Princípios de arquitetura
+Você pode fazer parte do projeto de diferentes maneiras:
 
-- O núcleo do jogo é puro. O pacote `game-core` contém regras, pontuação, rodízio e máquina de estados em TypeScript puro, sem React, e é testável em Node.
-- A dependência vai em uma direção só. `game-core` não depende de ninguém, `challenges` e `storage` dependem dele, e apenas o app web compõe tudo. A regra é verificada na CI.
-- Conteúdo separado de código. Cada desafio tem um arquivo de conteúdo validado por Zod, para que a revisão pedagógica não exija mexer em interface.
-- Local-first. Os dados ficam no IndexedDB do notebook, com exportação e importação em JSON.
-- Acessibilidade desde o início. Alternativa de toque e teclado ao arrastar, respeito à preferência de movimento reduzido e contraste pensado para leitura à distância na TV.
+- Desenvolvendo novos jogos e atividades educativas.
+- Sugerindo conteúdos e melhorias para a plataforma.
+- Contribuindo com conhecimentos pedagógicos.
+- Testando as atividades e relatando problemas.
+- Melhorando a acessibilidade e a experiência de aprendizagem.
+- Compartilhando o projeto com escolas, professores e comunidades.
 
-## Estrutura do repositório
+Acreditamos que diferentes conhecimentos e experiências podem transformar o projeto em uma ferramenta cada vez melhor.
 
-```
-infoquest/
-├─ apps/
-│  └─ web/                 Aplicação Vite com React
-├─ packages/
-│  ├─ game-core/           Regras, pontuação, rodízio e máquina de estados
-│  ├─ challenges/          Um módulo por desafio, com conteúdo e apresentação
-│  ├─ ui/                  Design system, tokens e componentes
-│  ├─ storage/             Dexie, repositórios e exportação e importação
-│  └─ config/              Configurações compartilhadas de TypeScript
-├─ docs/
-│  ├─ adr/                 Registros de decisões de arquitetura
-│  ├─ pedagogia/           Material de apoio pedagógico
-│  └─ contribuindo.md
-├─ assets-src/             Arquivos de origem de ilustrações e modelos 3D
-└─ .github/                Workflows e modelos de issue e pull request
-```
+## ❤️ Nosso propósito
 
-Esta é a estrutura alvo. As pastas serão criadas conforme os marcos avançam.
+Queremos que crianças tenham a oportunidade de descobrir, experimentar e aprender sobre tecnologia, mesmo quando não possuem acesso a computadores modernos, cursos particulares ou recursos educacionais especializados.
 
-## Requisitos
+**A tecnologia deve aproximar oportunidades, não criar barreiras.**
 
-- Node.js 24
-- pnpm (versão fixada pelo repositório)
-
-## Como rodar localmente
-
-```bash
-pnpm install
-pnpm dev
-```
-
-## Como validar
-
-```bash
-pnpm check
-```
-
-A arquitetura da aplicação web está documentada na [seção Arquitetura](apps/web/README.md#arquitetura).
-
-## Roadmap
-
-1. Fundação: monorepo, CI, tokens de design, esquema de conteúdo e núcleo com testes.
-2. Fatia vertical: desafio dos cabos jogável, testado em um notebook modesto.
-3. Fluxo completo: equipes com nomes, trilha e resultados, com dados locais, exportação e importação e modo offline.
-4. Desafios 2 e 3, com um estudo de viabilidade do 3D em paralelo.
-5. Desafios 4 e 5, endurecimento de acessibilidade e desempenho.
-6. Piloto em sala de aula e ajustes a partir do uso real.
-
-Um backend com login do professor e relatórios entre turmas só será considerado se houver necessidade comprovada, e com atenção redobrada ao consentimento e à LGPD.
-
-## Como contribuir
-
-O projeto é aberto a contribuições de desenvolvimento, design, pedagogia e testes em sala. Antes de começar:
-
-1. Leia `docs/contribuindo.md` e o `CODE_OF_CONDUCT.md` quando estiverem disponíveis.
-2. Abra uma issue descrevendo a proposta antes de enviar mudanças grandes.
-3. Siga o padrão Conventional Commits nas mensagens de commit.
-4. Garanta que testes, lint e verificação de dependências passam antes de abrir o pull request.
-
-## Licença
-
-A licença do código e a do conteúdo pedagógico e das ilustrações ainda serão definidas pela equipe. A decisão deve ser tomada antes da primeira contribuição externa, e o arquivo `LICENSE` será adicionado à raiz do repositório.
-
-## Equipe e contato
-
-A equipe e os canais de contato serão listados aqui.
+O Descomplica Informática é um passo nessa direção.
