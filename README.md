@@ -67,3 +67,9 @@ Queremos que crianças tenham a oportunidade de descobrir, experimentar e aprend
 **A tecnologia deve aproximar oportunidades, não criar barreiras.**
 
 O Descomplica Informática é um passo nessa direção.
+
+## 📋 Tarefas disponíveis
+
+Confira as atividades em:
+
+- **Notion:** [Acessar tarefas disponíveis](https://brawny-cloud-9cb.notion.site/Descomplica-Inform-tica-4218c1650f9580bbb988d7888861c304)
