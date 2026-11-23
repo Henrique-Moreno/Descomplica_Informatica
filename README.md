@@ -7,7 +7,7 @@ O **Descomplica Informática** surgiu com o propósito de tornar o ensino de inf
 
 A ideia nasceu da percepção de que muitas escolas públicas e associações que atendem comunidades em situação de vulnerabilidade social enfrentam dificuldades para oferecer atividades e recursos de qualidade na área da tecnologia.
 
-Diante dessa realidade, queremos criar uma plataforma educacional gratuita, que reúna diferentes atividades e jogos interativos para ensinar informática de maneira prática, lúdica e acessível.
+Como resposta a essa realidade, o projeto começou com o desenvolvimento do jogo **InfoQuest — Ligue as Peças**, uma experiência interativa que ensina conceitos básicos de informática. Desde então, segue em expansão, reunindo novas atividades e jogos educativos para proporcionar uma aprendizagem prática, lúdica e gratuita.
 
 Por meio de experiências gamificadas, crianças poderão aprender, explorar e experimentar conceitos de informática. Entre as atividades, estão experiências como montar um computador em um ambiente 3D, conhecer seus componentes, conectar periféricos às portas corretas e descobrir, na prática, como a tecnologia funciona.
 
@@ -34,7 +34,7 @@ Novas atividades poderão ser desenvolvidas e incorporadas à plataforma pela co
 
 ## 🌱 Um projeto gratuito, aberto e colaborativo
 
-O **Descomplica Informática** é um projeto social e de código aberto (*open source*).
+O **Descomplica Informática** é um projeto social e de código aberto.
 
 A plataforma foi pensada para ser acessível:
 
