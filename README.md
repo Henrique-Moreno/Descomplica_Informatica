@@ -68,7 +68,7 @@ Queremos que crianças tenham a oportunidade de descobrir, experimentar e aprend
 
 O Descomplica Informática é um passo nessa direção.
 
-## 📋 Tarefas disponíveis
+## 📋 Tarefas a serem desenvolvidas
 
 Confira as atividades em:
 
